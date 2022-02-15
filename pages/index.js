@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p>
-          Christina's Capstone Project
+          Christina Capstone Project
 
           <b>Greek Life Student Management System</b>
         </p>
