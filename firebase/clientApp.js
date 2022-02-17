@@ -2,13 +2,14 @@ import {initializeApp} from '@firebase/app';
 import {getFirestore} from '@firebase/firestore';
 
 const firebaseConfig = {
-  apiKey:process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain:process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId:process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket:process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId:process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId:process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId:process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+  apiKey: 'AIzaSyCv1iRxvTD1wTOtLt2ywawoqOyXBQgBGW0',
+  authDomain: 'greek-life-sms.firebaseapp.com',
+  projectId: 'greek-life-sms',
+  storageBucket: 'greek-life-sms.appspot.com',
+  messagingSenderId: '189468329603',
+  appId: '1:189468329603:web:0b3de9090223666ce93db6',
+  measurementId: 'G-F3ZQNEQJ66'
 };
+
 export const firebase = initializeApp(firebaseConfig);
 export const db = getFirestore(firebase);
