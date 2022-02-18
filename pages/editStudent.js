@@ -70,6 +70,9 @@ export default function EditStudent() {
   return (
     <div>
       <h2>Edit Student Record</h2>
+      <div style={{float: 'right'}}>
+        <Link href="/" passHref><a>Logout</a></Link>
+      </div>
       <div>
         <Link href="/students" passHref>
           <button>Return to Student List</button>

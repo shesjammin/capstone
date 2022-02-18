@@ -52,6 +52,9 @@ export default function AddStudent() {
   return (
     <div>
       <h2>Add Student</h2>
+      <div style={{float: 'right'}}>
+        <Link href="/" passHref><a>Logout</a></Link>
+      </div>
       <form onSubmit={saveStudent}>
         <fieldset>
           <legend>Greek Status</legend>

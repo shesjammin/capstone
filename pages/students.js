@@ -25,6 +25,9 @@ export default function Students() {
   return (
     <div>
       <h2>Student List</h2>
+      <div style={{float: 'right'}}>
+        <Link href="/" passHref><a>Logout</a></Link>
+      </div>
       <table border="1">
         <thead>
           <tr>

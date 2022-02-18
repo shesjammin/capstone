@@ -50,6 +50,9 @@ export default function Student() {
   return (
     <div>
       <h2>View Student Record</h2>
+      <div style={{float: 'right'}}>
+        <Link href="/" passHref><a>Logout</a></Link>
+      </div>
       <div>
         <Link href="/students" passHref>
           <button>Return to Student List</button>
