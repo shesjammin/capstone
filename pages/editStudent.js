@@ -54,7 +54,7 @@ export default function EditStudent() {
     const singleStudent = doc(db, 'students', id);
     Object.keys(studentSchema).forEach((key) => {
       if (event.target[key] && student.hasOwnProperty(key)) {
-        updateStudent(key, event.target[key].value);
+        student[key] = event.target[key].value;
       }
     });
     updateDoc(singleStudent, student).then(() => {
