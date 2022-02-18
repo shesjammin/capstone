@@ -42,7 +42,7 @@ export default function Student() {
   
   };
 
-	useEffect(() => {
+	useEffect((id) => {
 		getStudent(id);
 	}, [router.query.id]);
 
@@ -51,10 +51,10 @@ export default function Student() {
     <div>
       <h2>View Student Record</h2>
       <div>
-        <Link href="/students">
+        <Link href="/students" passHref>
           <button>Return to Student List</button>
         </Link>
-        <Link href={{pathname: "/editStudent", query: {id: student.id}}}>
+        <Link href={{pathname: "/editStudent", query: {id: student.id}}} passHref>
           <button>Edit Student Record</button>
         </Link>
       </div>
@@ -79,65 +79,65 @@ export default function Student() {
           </div>
           <div>
             <label>Dues Paid</label>
-            $<input id="duesPaid" type="number" name="duesPaid" value={student.duesPaid} type="text" onChange={(e) => updateStudent('duesPaid', e.target.value)} disabled={true} />
+            $<input id="duesPaid" type="number" name="duesPaid" value={student.duesPaid} onChange={(e) => updateStudent('duesPaid', e.target.value)} disabled={true} />
           </div>
         </fieldset>
         <fieldset>
           <legend>Student Info</legend>
           <div>
             <label>First Name</label>
-            <input id="firstName" type="text" name="firstName" value={student.firstName} type="text" onChange={(e) => updateStudent('firstName', e.target.value)} disabled={true} />
+            <input id="firstName" type="text" name="firstName" value={student.firstName} onChange={(e) => updateStudent('firstName', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Last Name</label>
-            <input id="lastName" type="text" name="lastName" value={student.lastName} type="text" onChange={(e) => updateStudent('lastName', e.target.value)} disabled={true} />
+            <input id="lastName" type="text" name="lastName" value={student.lastName} onChange={(e) => updateStudent('lastName', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Student Id</label>
-            <input id="studentId" type="number" name="studentId" value={student.studentId} type="text" onChange={(e) => updateStudent('studentId', e.target.value)} disabled={true} />
+            <input id="studentId" type="number" name="studentId" value={student.studentId} onChange={(e) => updateStudent('studentId', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Year</label>
-            <input id="year" type="number" name="year" value={student.year} type="text" onChange={(e) => updateStudent('year', e.target.value)} disabled={true} />
+            <input id="year" type="number" name="year" value={student.year} onChange={(e) => updateStudent('year', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>GPA</label>
-            <input id="gpa" type="number" name="gpa" value={student.gpa} type="text" onChange={(e) => updateStudent('gpa', e.target.value)} disabled={true} />
+            <input id="gpa" type="number" name="gpa" value={student.gpa} onChange={(e) => updateStudent('gpa', e.target.value)} disabled={true} />
           </div>
         </fieldset>
         <fieldset>
           <legend>Student Contact</legend>
           <div>
             <label>Telephone</label>
-            <input id="tel" type="tel" name="tel" value={student.tel} type="text" onChange={(e) => updateStudent('tel', e.target.value)} disabled={true} />
+            <input id="tel" type="tel" name="tel" value={student.tel} onChange={(e) => updateStudent('tel', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Email</label>
-            <input id="email" type="email" name="email" value={student.email} type="text" onChange={(e) => updateStudent('email', e.target.value)} disabled={true} />
+            <input id="email" type="email" name="email" value={student.email} onChange={(e) => updateStudent('email', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Address 1</label>
-            <input id="address1" type="text" name="address1" value={student.address1} type="text" onChange={(e) => updateStudent('address1', e.target.value)} disabled={true} />
+            <input id="address1" type="text" name="address1" value={student.address1} onChange={(e) => updateStudent('address1', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Address 2</label>
-            <input id="address2" type="text" name="address2" value={student.address2} type="text" onChange={(e) => updateStudent('address2', e.target.value)} disabled={true} />
+            <input id="address2" type="text" name="address2" value={student.address2} onChange={(e) => updateStudent('address2', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>City</label>
-            <input id="city" type="text" name="city" value={student.city} type="text" onChange={(e) => updateStudent('city', e.target.value)} disabled={true} />
+            <input id="city" type="text" name="city" value={student.city} onChange={(e) => updateStudent('city', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>State</label>
-            <input id="state" type="text" name="state" value={student.state} type="text" onChange={(e) => updateStudent('state', e.target.value)} disabled={true} />
+            <input id="state" type="text" name="state" value={student.state} onChange={(e) => updateStudent('state', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Postal Code</label>
-            <input id="postalCode" type="text" name="postalCode" value={student.postalCode} type="text" onChange={(e) => updateStudent('postalCode', e.target.value)} disabled={true} />
+            <input id="postalCode" type="text" name="postalCode" value={student.postalCode} onChange={(e) => updateStudent('postalCode', e.target.value)} disabled={true} />
           </div>
           <div>
             <label>Country Code</label>
-            <input id="countryCode" type="text" name="countryCode" value={student.countryCode} type="text" onChange={(e) => updateStudent('countryCode', e.target.value)} disabled={true} />
+            <input id="countryCode" type="text" name="countryCode" value={student.countryCode} onChange={(e) => updateStudent('countryCode', e.target.value)} disabled={true} />
           </div>
         </fieldset>
       </form>

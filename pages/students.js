@@ -45,7 +45,7 @@ export default function Students() {
 			{studentsArray.map((student) => {
 				return(
 				<tr key={student.id}>
-          <td><Link href={{pathname: "/student", query: {id: student.id}}}><button>View</button></Link></td>
+          <td><Link href={{pathname: "/student", query: {id: student.id}}} passHref><button>View</button></Link></td>
           <td>{student.studentId}</td>
 					<td>{student.firstName}</td>
 					<td>{student.lastName}</td>
@@ -63,7 +63,7 @@ export default function Students() {
         <tfoot>
           <tr>
             <td colSpan={11}>
-              <Link href="/addStudent">
+              <Link href="/addStudent" passHref>
                 <button style={{float: 'right'}}>Add Student</button>
               </Link>
             </td>
