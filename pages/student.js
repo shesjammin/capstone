@@ -42,7 +42,7 @@ export default function Student() {
   
   };
 
-	useEffect((id) => {
+	useEffect(() => {
 		getStudent(id);
 	}, [router.query.id]);
 

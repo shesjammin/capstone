@@ -62,7 +62,7 @@ export default function EditStudent() {
     });
   };
 
-	useEffect((id) => {
+	useEffect(() => {
 		getStudent(id);
 	}, [router.query.id]);
 
